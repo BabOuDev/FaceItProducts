@@ -1,0 +1,34 @@
+
+  <div class="show" ng-hide="isEditing && editIndex == $index" data-id="$index">
+	<div class="input-group col-xs-12">
+	  <label ng-bind-html="$index + 1" class="product-id"></label>
+	  <label ng-bind-html="product.name" class="" ></label>
+	</div>
+	<div class="input-group col-xs-6 price">
+	  <label ng-bind-html="currency" class=""></label>
+	  <label ng-bind-html="product.price" class="" ></label>
+	</div>
+	<div class="input-group col-xs-12">
+	  <p ng-bind-html="product.description" class="textarea" ></p>
+	</div>
+	<div class="input-group col-xs-12" ng-hide="isEditing">
+	  <button class="btn btn-danger col-xs-6" ng-click="removeProduct($index)" aria-label="Remove"><span class="glyphicon glyphicon-remove"></span>Remove</button>
+	  <button class="btn btn-info col-xs-6" ng-click="editProduct($index)" aria-label="Edit"><span class="glyphicon glyphicon-edit"></span>Edit</button>
+	</div>
+  </div>
+  <div class="edit" ng-show="isEditing && editIndex == $index" data-id="$index">
+	<div class="input-group col-xs-12">
+	  <label ng-bind-html="$index + 1" data-id="$index" class="input-group-addon product-id"></label>
+	  <input type="text" ng-model="product.name" class="form-control" >
+	</div>
+	<div class="input-group col-xs-6price">
+	  <label ng-bind-html="currency" class="input-group-addon currency"></label>
+	  <input type="number" ng-model="product.price" class="form-control" >
+	</div>
+	<div class="input-group col-xs-12">
+	  <textarea ng-model="product.description" class="form-control" ></textarea>
+	</div>
+	<div class="input-group col-xs-12">
+	  <button class="btn btn-info col-xs-6 col-xs-offset-6" ng-click="editProduct($index)" aria-label="Edit"><span class="glyphicon glyphicon-check"></span>OK</button>
+	</div>
+  </div>

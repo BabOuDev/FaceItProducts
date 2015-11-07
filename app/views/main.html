@@ -1,0 +1,29 @@
+<div class="container">
+  <h2>FaceIt Products!</h2>
+  
+  
+  <div class="row">
+	<h4>Products List</h4>
+	<!-- New Product inputs -->
+	<div class="form-group product">
+      <div class="input-group col-xs-12">
+	    <label class="input-group-addon product-id">new</label>
+        <input type="text" ng-model="product.name" class="form-control" placeholder="Product Name" >
+      </div>
+      <div class="input-group col-xs-6">
+      <span ng-bind-html="currency" class="input-group-addon currency"></span>
+      <input type="number" ng-model="product.price" class="form-control" placeholder="Price" >
+      </div>
+      <div class="input-group col-xs-12">
+        <textarea ng-model="product.description" class="form-control" placeholder="Product Description" ></textarea>
+      </div>
+      <div class="input-group col-xs-12">
+	    <button class="btn btn-info col-xs-6 col-xs-offset-6" ng-click="addProduct()" aria-label="Add"><span class="glyphicon glyphicon-plus"></span>Add</button>
+      </div>
+    </div>
+	<!-- Product list -->
+    <div class="form-group product" ng-repeat="product in products">
+      <product></product>
+    </div>
+  </div>
+</div>
