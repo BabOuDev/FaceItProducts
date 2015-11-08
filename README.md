@@ -42,9 +42,9 @@ The development tools are:
 
 # Exercice
 
-The environment is composed from a task runner (Grunt), in order to process all development process tasks (test/clean/build/doc).
+The environment is composed from a task runner (Grunt), in order to process all development process tasks (integrity/test/build/doc).
 
-The client-side librraries are Handled by a package manager (Bower).
+The client-side libraries are Handled by a package manager (Bower).
 
 The application has been generated following MVC design pattern (AngularJS).
 
@@ -54,14 +54,32 @@ The angular application allow CRUD on a product list. It's composed of:
  - 1 Directive: to display/edit a product.
  - 1 Factory: to retrieve dummy data from a JSON file.
 
-Test cases are writed in behavior-driven javascript (Jasmine).
+Test cases are written in behaviour-driven JavaScript (Jasmine).
 
 Documentation is generated from application comments (NgDocs).
 
-The project is available on GitHub
+The project is under version control and available here (GitHub).
 
+#Installation
 
-# Build & development
+Prerequisites:
+
+NodeJS v0.10.x+ and NPM v2.1.0+ installed
+
+1. Clone the Git Repository
+
+	git clone https://github.com/USERNAME/REPOSITORY.git
+	
+2. Install dependencies
+
+	npm install
+	bower install
+
+3. Run Grunt
+	
+	grunt
+
+# Deploy Build & development
 
 Run the following command in the project root folder:
 
@@ -72,15 +90,15 @@ grunt serve - preview in development.
 grunt serve:dist - preview for release.
 
 
-# Testing
+# Run Tests
 
 Run the following command in the project root folder:
 
 grunt test - Execute all Jasmine tests.
 
 
-# Documentation
+# Generate Documentation
 
 Run the following command in the project root folder:
 
-grunt ngdocs - Build the documentation (accessible in /docs)
+grunt docs - Build the api documentation (accessible in /docs)

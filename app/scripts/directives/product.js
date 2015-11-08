@@ -1,11 +1,12 @@
 'use strict';
 
 /**
- * @ngdoc function
+ * @ngdoc directive
  * @name faceitApp.directives:product
+ * @restrict E
  * @description
  * # Product
- * Directive for the product items.
+ * Directive for the product items. This directive show/edit/remove a product item.
  */
 angular.module('app.directives.product', [] )
 	.directive('product', function(){

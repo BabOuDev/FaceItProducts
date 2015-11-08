@@ -17,7 +17,7 @@ describe('Controller: AboutController', function () {
     });
   }));
 
-  it('should be the good person who writed the code', function () {
+  it('should be the good person who writed the code!', function () {
     expect(scope.me).toBe('ROYER-ADNOT Remy');
   });
 });

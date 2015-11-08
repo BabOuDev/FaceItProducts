@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * @ngdoc function
+ * @ngdoc controller
  * @name faceitApp.controller:MainController
  * @description
  * # MainController
@@ -29,7 +29,7 @@ angular.module('faceitApp')
 	$scope.addProduct = function () {
 		// Checking if product have a name and price
 		if(!$scope.product || !$scope.product.name || !$scope.product.price){
-		  alert('You must enter at least a Name and Price for this product.')
+		  window.alert('You must enter at least a Name and Price for this product.');
 		  return;
 		}
 		$scope.products.push($scope.product);

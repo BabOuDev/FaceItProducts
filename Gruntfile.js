@@ -167,7 +167,8 @@ module.exports = function (grunt) {
           ]
         }]
       },
-      server: '.tmp'
+      server: '.tmp',
+      docs: 'docs'
     },
 
     // Add vendor prefixed styles
@@ -426,17 +427,15 @@ module.exports = function (grunt) {
     karma: {
       unit: {
         configFile: 'test/karma.conf.js',
-        singleRun: true
+        singleRun: true,
       }
     },
 	
 	ngdocs: {
 		options: {
 		  dest: 'docs',
-		  html5Mode: true,
-		  title: "Face It Products Documentation",
-		  image: "app/images/faceit.jpg",
-		  
+		  title: 'APIDOC - Face It Products',
+		  image: 'app/images/faceit.jpg',
 		},
 		api: {
 		  src: ['app/**/*.js'],
@@ -454,6 +453,7 @@ module.exports = function (grunt) {
 
     grunt.task.run([
       'clean:server',
+      'docs',
       'wiredep',
       'concurrent:server',
       'postcss:server',
@@ -478,6 +478,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
+    'docs',
     'wiredep',
     'useminPrepare',
     'concurrent:dist',
@@ -494,10 +495,17 @@ module.exports = function (grunt) {
     'htmlmin'
   ]);
 
+  grunt.registerTask('docs', [
+    
+    'clean:docs',
+    'ngdocs'
+  ]);
+  
   grunt.registerTask('default', [
     'newer:jshint',
     'newer:jscs',
     'test',
+    'docs',
     'build'
   ]);
 };

@@ -3,6 +3,7 @@
   "private": true,
   "devDependencies": {
     "autoprefixer-core": "^5.2.1",
+    "chai": "^3.4.1",
     "grunt": "^0.4.5",
     "grunt-angular-templates": "^0.5.7",
     "grunt-concurrent": "^1.0.0",
@@ -22,14 +23,23 @@
     "grunt-karma": "*",
     "grunt-newer": "^1.1.0",
     "grunt-ng-annotate": "^0.9.2",
+    "grunt-ngdocs": "^0.2.9",
     "grunt-postcss": "^0.5.5",
     "grunt-svgmin": "^2.0.0",
     "grunt-usemin": "^3.0.0",
     "grunt-wiredep": "^2.0.0",
+    "jasmine": "^2.3.2",
     "jit-grunt": "^0.9.1",
     "jshint-stylish": "^1.0.0",
+    "karma-chai": "^0.1.0",
     "karma-jasmine": "*",
+    "karma-mocha": "^0.2.0",
+    "karma-mocha-reporter": "^1.1.1",
     "karma-phantomjs-launcher": "*",
+    "karma-sinon": "^1.0.4",
+    "karma-spec-reporter": "0.0.22",
+    "mocha": "^2.3.3",
+    "sinon": "^1.17.2",
     "time-grunt": "^1.0.0"
   },
   "engines": {
@@ -38,7 +48,5 @@
   "scripts": {
     "test": "grunt test"
   },
-  "dependencies": {
-    "grunt-ngdocs": "^0.2.9"
-  }
+  "dependencies": {}
 }

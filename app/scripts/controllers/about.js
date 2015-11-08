@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * @ngdoc function
+ * @ngdoc controller
  * @name faceitApp.controller:AboutController
  * @description
  * # AboutController

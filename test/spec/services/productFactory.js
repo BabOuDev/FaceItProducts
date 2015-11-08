@@ -1,12 +1,12 @@
 'use strict';
 
-describe('Controller: MainController', function () {
+describe('Service: ProductFactory', function () {
 
   // load the controller's module
   beforeEach(module('faceitApp'));
 
   var MainController, productFactory, 
-    controller, scope, http;
+    controller, scope, http, httpBackend;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope, $http, $injector) {
@@ -15,6 +15,9 @@ describe('Controller: MainController', function () {
 	http = $http;
 	productFactory = $injector.get('productFactory');
 
+	httpBackend = $injector.get('$httpBackend');
+    httpBackend.whenGET('dummyData.json').respond(200, '');
+	
     MainController = controller('MainController', {
       $scope: scope,
 	  productFactory: productFactory
@@ -25,16 +28,12 @@ describe('Controller: MainController', function () {
     expect(scope.products.length).toBe(0);
   });
   
-  it('should add a product to the list', function () {
-    scope.product = {name:'This is an adding Test', price:40, description:'This is a description'};
-    scope.addProduct();
-    expect(scope.products.length).toBe(1);
+  it('should retrieve 10 product item from dummyData', function () {
+    productFactory.get().success(function(data){
+	  expect(data.length).toBe(10);
+	});
   });
   
-  it('should not add if no name and price specified', function () {
-    scope.product = {};
-    scope.addProduct();
-    expect(scope.products.length).toBe(0);
-  });
+
   
 });
