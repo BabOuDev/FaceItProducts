@@ -21,7 +21,7 @@
 	 |_|_\\___/ |_| |___|_|_\  /_/ \_\___/|_|\_|\___/ |_|   |_|_\___|_|_|_\_, |
 	 
 	 
-## FaceIt Products
+# FaceIt Products
 
 This project is mostly generated with:
  - Yeoman - THE Awesome generator
@@ -34,19 +34,22 @@ The development tools are:
  - Karma - Test Executer
  - Jasmine - Test Writer
  - NgDoc - Documentation Generator
+ 
  The client-side libraries are:
  - Angular - MVC JS Framework
  - JQuery - JS Librarie
  - Bootstrap - CSS Librarie
  
 
-# Exercice
+## Exercice
 
-The environment is composed from a task runner (Grunt), in order to process all development process tasks (integrity/test/build/doc).
+The environment is composed of a task runner (Grunt), in order to process all development process tasks (integrity/test/build/doc).
 
 The client-side libraries are Handled by a package manager (Bower).
 
 The application has been generated following MVC design pattern (AngularJS).
+
+Test cases are written in behaviour-driven JavaScript (Jasmine).
 
 The angular application allow CRUD on a product list. It's composed of:
  - 2 View: Main and About.
@@ -54,51 +57,49 @@ The angular application allow CRUD on a product list. It's composed of:
  - 1 Directive: to display/edit a product.
  - 1 Factory: to retrieve dummy data from a JSON file.
 
-Test cases are written in behaviour-driven JavaScript (Jasmine).
-
 Documentation is generated from application comments (NgDocs).
 
 The project is under version control and available here (GitHub).
 
-#Installation
+## Installation
 
-Prerequisites:
+1. Prerequisites:
 
-NodeJS v0.10.x+ and NPM v2.1.0+ installed
+		  NodeJS v0.10.x+ and NPM v2.1.0+ installed
 
 1. Clone the Git Repository
 
-	git clone https://github.com/USERNAME/REPOSITORY.git
+		  git clone https://github.com/USERNAME/REPOSITORY.git
 	
 2. Install dependencies
 
-	npm install
-	bower install
+		  npm install
+		  bower install
 
 3. Run Grunt
 	
-	grunt
+		  grunt
 
-# Deploy Build & development
-
-Run the following command in the project root folder:
-
-grunt build - build the project for development.
-grunt build:dist - build the project for release.
-
-grunt serve - preview in development.
-grunt serve:dist - preview for release.
-
-
-# Run Tests
+## Deploy Build & development
 
 Run the following command in the project root folder:
 
-grunt test - Execute all Jasmine tests.
+		  grunt build - build the project for development.
+		  grunt build:dist - build the project for release.
+
+		  grunt serve - preview in development.
+		  grunt serve:dist - preview for release.
 
 
-# Generate Documentation
+## Run Tests
 
 Run the following command in the project root folder:
 
-grunt docs - Build the api documentation (accessible in /docs)
+		  grunt test - Execute all Jasmine tests.
+
+
+## Generate Documentation
+
+Run the following command in the project root folder:
+
+		  grunt docs - Build the api documentation (accessible in /docs)
